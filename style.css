@@ -1,6 +1,9 @@
 :root {
   --bg-link: rgb(255, 46, 0);
+  --bg-section-light: rgb(255, 245, 235);
   --txt-light: rgba(255, 245, 235, 1);
+  --txt-dark: rgb(37, 37, 37);
+  --txt-gray: rgb(99, 99, 99);
   --txt-highlight: rgb(255, 174, 52);
   --box-shadow: 0px 4px 23px 0px rgba(255, 49, 3, 0.70);
   --border: rgb(144, 26, 0);
@@ -77,10 +80,13 @@ html {
   font-size: 2rem;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
   text-align: center;
   text-transform: uppercase;
   transition: color 0.2s linear;
+}
+
+.navbar .navbar-nav .nav-link.cta-link {
+  font-weight: 700;
 }
 
 .navbar .navbar-nav .nav-link:not(.cta-link):hover {
@@ -103,13 +109,19 @@ html {
   row-gap: 2rem;
 }
 
+.hero .hero-right {
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 0;
+}
+
 .hero .hero-h1 {
   color: var(--txt-light);
   font-family: 'Poppins', sans-serif;
   font-size: 3.2rem;
   font-style: italic;
   font-weight: 700;
-  line-height: normal;
   text-transform: uppercase;
   text-shadow: 0px 3px 2px rgba(0, 0, 0, 0.80);
 }
@@ -120,7 +132,6 @@ html {
   font-size: 2.4rem;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 
 .hero .hero-p.hero-b {
@@ -144,13 +155,6 @@ html {
   text-decoration: none;
 }
 
-.hero .hero-right {
-  position: relative;
-  width: fit-content;
-  margin: 0 auto;
-  padding: 0;
-}
-
 .hero .hero-picture::before {
   content: '';
   position: absolute;
@@ -167,9 +171,97 @@ html {
   z-index: 1;
 }
 
+/* FIT */
+.fit {
+  padding-top: 1.5rem;
+  padding-bottom: 5rem;
+  background-color: var(--bg-section-light);
+}
+
+.fit-bottom {
+  padding-top: 9.9rem;
+  row-gap: 2rem;
+}
+
+.fit-h2 {
+  color: var(--txt-dark);
+  font-family: 'Poppins', sans-serif;
+  font-size: 3.2rem;
+  font-style: italic;
+  font-weight: 700;
+  max-width: 83.9rem;
+  margin: 0 auto;
+}
+
+.fit-h2--highlight {
+  color: var(--txt-highlight);
+}
+
+.fit-h3 {
+  color: var(--txt-dark);
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.8rem;
+  font-style: italic;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.fit-p {
+  color: var(--txt-dark);
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.8rem;
+  max-width: 94.2rem;
+  margin: 0 auto;
+}
+
+.fit-p.fit-i {
+  color: var(--txt-gray);
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.6rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.fit-icons {
+  gap: 3rem 9.5rem;
+  padding-top: 4rem;
+}
+
+.fit-icon {
+  row-gap: 2rem;
+}
+
+.fit-figure {
+  width: 12.9rem;
+  height: 12.9rem;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 100%;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.25);
+}
+
+.fit-info {
+  color: var(--txt-dark);
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 3.2rem;
+}
+
+.fit-img {
+  width: 3.8rem;
+  height: 4.2rem;
+  margin: 0 auto;
+}
+
 /* MEDIA QUERY MAX-WIDTH */
 @media screen and (max-width: 991px) {
-  .container-fluid {
+  .hero .container-fluid {
     padding-left: 1.8rem;
     padding-right: 1.8rem;
   }
@@ -219,6 +311,10 @@ html {
   .hero .hero-p {
     padding-right: 10rem;
   }
+
+  .fit {
+    padding-top: 7rem;
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -255,6 +351,11 @@ html {
     right: -3rem;
     bottom: -3rem;
   }
+
+  .fit-h2 {
+    font-size: 4.6rem;
+    text-transform: uppercase;
+  }
 }
 
 @media screen and (min-width: 1140px) {
@@ -284,6 +385,15 @@ html {
 
   .hero .hero-p {
     padding-right: 22rem;
+  }
+
+  .fit {
+    padding-top: 21.9rem;
+    padding-bottom: 12rem;
+  }
+
+  .fit-icons {
+    margin-top: 5.9rem;
   }
 }
 
