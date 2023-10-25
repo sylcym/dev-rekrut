@@ -4,8 +4,10 @@
   --bg-dark: rgb(7, 8, 6);
   --txt-light: rgba(255, 245, 235, 1);
   --txt-light-2: rgba(239, 239, 239, 1);
+  --txt-light-3: rgba(224, 224, 224, 1);
   --txt-dark: rgb(37, 37, 37);
   --txt-gray: rgb(99, 99, 99);
+  --txt-gray-2: rgba(184, 184, 184, 1);
   --txt-highlight: rgba(255, 174, 52, 1);
   --box-shadow: 0px 4px 23px 0px rgba(255, 49, 3, 0.70);
   --border: rgb(144, 26, 0);
@@ -376,7 +378,6 @@ strong {
 
 .info .info-item {
   padding: 0 2.9rem;
-  padding-left: 2.9rem;
   background-color: transparent;
   background-image: url(./images/flash.svg);
   background-repeat: no-repeat;
@@ -389,6 +390,70 @@ strong {
   font-weight: 400;
   line-height: 3.2rem;
   text-align: left;
+}
+
+/* WAVES */
+.waves {
+  padding-top: 4.2rem;
+  padding-bottom: 4.2rem;
+  background-image: url(./images/waves-bg-mobile.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.waves .waves-wrapper {
+  max-width: 68.5rem;
+  margin: 0 auto;
+  row-gap: 2rem;
+}
+
+.waves .waves-h2 {
+  color: var(--txt-highlight);
+  font-family: 'Poppins', sans-serif;
+  font-size: 32px;
+  font-style: italic;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 0 2rem;
+}
+
+.waves .waves-p {
+  color: var(--txt-light);
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+.waves .waves-p.waves-i {
+  color: var(--txt-light-3);
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.waves .waves-list {
+  row-gap: 1.5rem;
+}
+
+.waves .waves-item {
+  padding: 0 2.1rem;
+  background-color: transparent;
+  background-image: url(./images/circle.svg);
+  background-repeat: no-repeat;
+  background-size: 1.1rem;
+  background-position-y: 1.1rem;
+  border: 0;
+  color: var(--txt-light);
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 3.2rem;
 }
 
 /* MEDIA QUERY MAX-WIDTH */
@@ -601,6 +666,30 @@ strong {
     left: -2.8rem;
     width: 44rem;
     height: 51.4rem;
+  }
+
+  .waves {
+    padding-top: 6.6rem;
+    padding-bottom: 6.5rem;
+    background-image: url(./images/waves-bg-desktop.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .waves .waves-wrapper {
+    margin-left: 0;
+  }
+
+  .waves .waves-h2 {
+    font-size: 4.6rem;
+    line-height: 4.8rem;
+    text-align: left;
+    padding: 0;
+  }
+
+  .waves .waves-p.waves-i {
+    color: var(--txt-gray-2);
   }
 }
 
