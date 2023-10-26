@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dev-Rekrut</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="form-page">
+  <header class="header">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary ">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="./">
+          <img class="navbar-logo" src="./images/logo.svg" alt="Copreslin" >
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Copreslin</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Bądź fit</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Jedyny taki</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Warto obserwować</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link cta-link cta-link--disabled" href="#">Zamów</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+  <main class="form">
+    <div class="form-wrapper container-fluid">
+      <h1 class="form-h1">
+        <strong>Formularz zamówienia</strong>
+      </h1>
+      <form action="" class="form-container d-flex flex-column needs-validation" novalidate>
+        <div class="form-group d-md-flex flex-wrap justify-content-md-end">
+          <label for="firstName" class="form-label">Imię i nazwisko / <span class="display-block">Firma</span></label>
+          <input type="text" class="form-control" id="firstName" value="" required>
+          <div class="invalid-feedback">Imię i nazwisko / Firma jest obowiąskowa</div>
+        </div>
+        <div class="form-group d-md-flex flex-wrap justify-content-md-end">
+          <label for="address" class="form-label">Adres</label>
+          <input type="text" class="form-control" id="address" value="" required>
+          <div class="invalid-feedback">Adres jest obowiąskowa</div>
+        </div>
+        <div class="form-group d-md-flex flex-wrap justify-content-md-end">
+          <label for="email" class="form-label">E-mail</label>
+          <input type="email" class="form-control" id="email" value="" required>
+          <div class="invalid-feedback">E-mail jest obowiąskowa</div>
+        </div>
+        <div class="form-group d-md-flex flex-wrap justify-content-md-end">
+          <label for="tel" class="form-label">Telefon</label>
+          <input type="number" class="form-control" id="tel" value="" required>
+          <div class="invalid-feedback">Telefon jest obowiąskowa</div>
+        </div>
+        <button class="btn cta-submit" type="submit">Zamów</button>
+      </form>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-wrapper text-center d-flex flex-column">
+      <a href="./" class="footer-link">
+        <img src="./images/logo.svg" class="footer-logo" alt="Copresline">
+      </a>
+  
+      <p class="footer-p">
+        *Produkt na tej stronie nie ma właściwości leczniczych. Przed użyciem należy zapoznać się z instrukcją i stosować urządzenie zgodnie z nią. Produkt nie jest objęty gwarancja osiągnięcia prezentowanych rezultatów. Działanie urządzenia jest kwestią indywidualną dla każdej osoby i może dawać różne efekty w zależności od indywidualnych uwarunkowań każdego organizmu.
+      </p>
+  
+      <ul class="list-group footer-list">
+        <li class="list-group-item footer-item">
+          <a class="footer-link" href="#">Regulamin</a>
+        </li>
+        <li class="list-group-item footer-item">
+          <a class="footer-link" href="#">Polityka prywatności</a>
+        </li>
+        <li class="list-group-item footer-item">
+          <a class="footer-link" href="#">Kontakt</a>
+        </li>
+      </ul>
+  
+      <p class="footer-copyright">Copyrights © 2022 <strong>COPRESLIN</strong>. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script> 
+  <script>
+    (function () {
+      'use strict'
+
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      var forms = document.querySelectorAll('.needs-validation')
+
+      // Loop over them and prevent submission
+      Array.prototype.slice.call(forms)
+        .forEach(function (form) {
+          form.addEventListener('submit', function (event) {
+            if (!form.checkValidity()) {
+              event.preventDefault()
+              event.stopPropagation()
+            }
+
+            console.log('here');
+
+            form.classList.add('was-validated')
+          }, false)
+        })
+    })()
+  </script>
+</body>
+</html>

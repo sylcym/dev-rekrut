@@ -2,6 +2,7 @@
   --bg-link: rgb(255, 46, 0);
   --bg-img: rgba(193, 35, 0, 1);
   --bg-dark: rgb(7, 8, 6);
+  --txt-white: rgba(255, 255, 255, 1);
   --txt-light: rgba(255, 245, 235, 1);
   --txt-light-2: rgba(239, 239, 239, 1);
   --txt-light-3: rgba(224, 224, 224, 1);
@@ -29,6 +30,18 @@ h3 {
   margin-bottom: 0;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
 /* RESET BOOTSTRAP */
 .container-fluid {
   max-width: 116.6rem;
@@ -40,7 +53,8 @@ h3 {
 }
 
 /* CTA */
-.cta-link {
+.cta-link,
+.cta-submit {
   margin: 0 auto;
   min-width: 25.7rem;
   width: fit-content;
@@ -51,12 +65,25 @@ h3 {
   transition: background-color 0.2s linear;
 }
 
-.cta-link:hover {
+.cta-link:hover,
+.cta-submit:hover {
   background-color: var(--border);
 }
 
+.cta-link--disabled {
+  pointer-events: none;
+}
+
+/* BODY */
+body.form-page {
+  background-image: url(./images/hero-bg-mobile.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 /* HEADER */
-.header {
+body:not(.form-page) .header {
   background-image: url(./images/hero-bg-mobile.png);
   background-size: cover;
   background-repeat: no-repeat;
@@ -585,6 +612,76 @@ h3 {
   border-top: 1px solid rgba(255, 255, 255, 0.3);
 }
 
+/* FORM */
+.form {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  border-bottom: 2px solid #FFAE34;
+}
+
+.form .form-wrapper {
+  max-width: 76.2rem;
+  margin: 0 auto;
+}
+
+.form .form-h1 {
+  color: var(--txt-highlight);
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.8rem;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 3.8rem;
+}
+
+.form .form-container {
+  row-gap: 1.5rem;
+  padding-top: 2.8rem;
+}
+
+.form .form-label {
+  color: var(--txt-white);
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  padding-right: 1rem;
+  /* 111.111% */
+}
+
+.form .form-control {
+  height: 4rem;
+  border-radius: 3px;
+  border: 1px solid #B3B3B3;
+  background: #FFF;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  font-style: normal;
+  line-height: 20px;
+}
+
+.form .btn.cta-submit {
+  color: #FFF;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  text-transform: uppercase;
+  padding: 1.35rem 1rem;
+  margin-top: 1.3rem;
+  width: 100%;
+  max-width: 58rem;
+}
+
+.form .invalid-feedback {
+  color: #ff2e00;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+}
+
 /* MEDIA QUERY MAX-WIDTH */
 @media screen and (max-width: 991px) {
   .hero.container-fluid {
@@ -600,7 +697,18 @@ h3 {
 
 /* MEDIA QUERY MIN-WIDTH */
 @media screen and (min-width: 768px) {
-  .header {
+  .display-block {
+    display: block;
+  }
+
+  body.form-page {
+    background-image: url(./images/hero-bg-desktop-form.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  body:not(.form-page) .header {
     background-image: url(./images/hero-bg-desktop.png);
     background-size: cover;
     background-repeat: no-repeat;
@@ -695,6 +803,51 @@ h3 {
   .footer .footer-list {
     flex-direction: row;
     justify-content: space-evenly;
+  }
+
+  .form {
+    padding-top: 12.2rem;
+    padding-bottom: 12.3rem;
+  }
+
+  .form .form-control {
+    max-width: 58rem;
+  }
+
+  .form .form-h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 4.6rem;
+    line-height: 4.8rem;
+    width: fit-content;
+    margin-left: auto;
+    padding-right: 2rem;
+  }
+
+  .form .form-label {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    line-height: 2rem;
+    text-align: right;
+  }
+
+  .form .form-control {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    line-height: 2rem;
+  }
+
+  .form .btn.cta-submit {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+    margin-right: 0;
+  }
+
+  .form .invalid-feedback {
+    margin-left: 17rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 }
 
