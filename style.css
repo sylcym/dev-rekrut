@@ -621,6 +621,11 @@ body:not(.form-page) .header {
   line-height: 1.4rem;
   text-decoration: none;
   letter-spacing: 0.28rem;
+  transition: color 0.2s linear;
+}
+
+.footer .footer-link:hover {
+  color: var(--bg-link);
 }
 
 .footer-copyright {
