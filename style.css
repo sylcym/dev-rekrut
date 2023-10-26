@@ -106,7 +106,8 @@ body.form-page {
 
 /* HEADER */
 body:not(.form-page) .header {
-  background-image: url(./images/hero-bg-mobile.png);
+  background: url(./images/hero-bg-mobile.png), #191919;
+  background-blend-mode: normal, screen, normal;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -453,7 +454,7 @@ body:not(.form-page) .header {
 .waves {
   padding-top: 4.2rem;
   padding-bottom: 4.2rem;
-  background-image: url(./images/waves-bg-mobile.png);
+  background: url(./images/waves-bg-mobile.png), #191919;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -736,7 +737,7 @@ body:not(.form-page) .header {
   }
 
   body:not(.form-page) .header {
-    background-image: url(./images/hero-bg-desktop.png);
+    background: url(./images/hero-bg-desktop.png), #191919;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -1036,7 +1037,7 @@ body:not(.form-page) .header {
   .waves {
     padding-top: 6.6rem;
     padding-bottom: 6.5rem;
-    background-image: url(./images/waves-bg-desktop.png);
+    background: url(./images/waves-bg-desktop.png), #191919;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
