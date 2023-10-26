@@ -48,27 +48,29 @@
       <h1 class="form-h1">
         <strong>Formularz zamówienia</strong>
       </h1>
+
       <form action="" class="form-container d-flex flex-column needs-validation" novalidate>
         <div class="form-group d-md-flex flex-wrap justify-content-md-end">
           <label for="firstName" class="form-label">Imię i nazwisko / <span class="display-block">Firma</span></label>
           <input type="text" class="form-control" id="firstName" value="" required>
-          <div class="invalid-feedback">Imię i nazwisko / Firma jest obowiąskowa</div>
+          <div class="invalid-feedback">Wypełnij poprawnie pole z imieniem i nazwiskiem / firmą</div>
         </div>
         <div class="form-group d-md-flex flex-wrap justify-content-md-end">
           <label for="address" class="form-label">Adres</label>
           <input type="text" class="form-control" id="address" value="" required>
-          <div class="invalid-feedback">Adres jest obowiąskowa</div>
+          <div class="invalid-feedback">Wypełnij poprawnie pole z adresem</div>
         </div>
         <div class="form-group d-md-flex flex-wrap justify-content-md-end">
           <label for="email" class="form-label">E-mail</label>
           <input type="email" class="form-control" id="email" value="" required>
-          <div class="invalid-feedback">E-mail jest obowiąskowa</div>
+          <div class="invalid-feedback">Wypełnij poprawnie pole z emailem</div>
         </div>
         <div class="form-group d-md-flex flex-wrap justify-content-md-end">
           <label for="tel" class="form-label">Telefon</label>
           <input type="number" class="form-control" id="tel" value="" required>
-          <div class="invalid-feedback">Telefon jest obowiąskowa</div>
+          <div class="invalid-feedback">Wypełnij poprawnie pole z numerem telefonu</div>
         </div>
+
         <button class="btn cta-submit" type="submit">Zamów</button>
       </form>
     </div>
@@ -116,9 +118,6 @@
               event.preventDefault()
               event.stopPropagation()
             }
-
-            console.log('here');
-
             form.classList.add('was-validated')
           }, false)
         })
